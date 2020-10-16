@@ -12,7 +12,7 @@ def hirc():
 		s.listen(10)
 		print("listening on " + str(ip) + " through port " + str(port))
 		c, addr = s.accept()
-		print(str(addr[0]) + " connected through port " + str(addr[1]))
+		print("connected to " + str(addr[0]) + " through port " + str(addr[1]))
 		while True:
 			message = input(str(username) + " #> ")
 			c.sendall(bytes(username + " #> " + message, encoding = 'utf-8'))
